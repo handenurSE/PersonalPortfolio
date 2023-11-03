@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE-edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Personal Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/9184e62aae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+<div id="header">
+    <div class="container"></div>
+    <nav>
+    <ul id="sidemenu">
+        <li><a href="#header">Home</a></li> 
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+    </ul>  
+</nav>
+<div class="header-text">
+    <p class="juniorEngineer">Software Engineer</p>
+<h1> Hi there, I am <span>Hande.</span> <br> Ever wondered how to say my name?<br> It's Hahn-deh. Welcome to my website!</h1>
+</div>
+</div> 
+</div>
+<!-----------about-------------->
+<div id="about"></div>
+      <div class="container">
+          <div class="row">
+             <div class="about-col-1">
+                <img src="images/User.jpg">
+             </div>
+             <div class="about-col-2">
+                <h1 class="sub-title" >About Me</h1>
+                <p>Hi there! I am a Software Engineer intern. I thrive on problem solving and have a keen interest in web development.I am open to new opportunities to grow and make an impact. When I am not coding I enjoy hiking,reading, cooking and dancing. Feel free to contact me for any collaboration or opportunities! 😊</p>
+
+             <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')" >Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education </p>
+             </div>
+              <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                    <li><span>Front-end Skills</span><br> HTML/CSS, JavaScript,React</li>
+                    <li><span>Backend</span><br> Python, Node.Js, Java</li>
+                    <li><span>Cloud</span><br> Microsoft Azure, AWS</li>
+                  </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2023-Current</span><br> Software Enginner Intern</li>
+                  <li><span>2022-2023</span><br> Team Leader</li>
+                  <li><span>2021-2022</span><br> Team Leader</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id= "education">
+                <ul>
+                  <li><span>2023</span><br>Software Engineer Bootcamp</li>
+                  <li><span>2019</span><br> Cognitive Neuroscience</li>
+                  <li><span>2018</span><br> Clinical Psychology</li>
+                </ul>
+            </div>
+           </div>
+         </div>
+      </div>
+<!---------------projects--------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+         <div class="projects-list">
+
+             <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, perspiciatis? Aliquam corporis facilis repellendus corrupti molestias totam, quam perferendis ipsam magnam autem hic, quibusdam necessitatibus possimus dolorum ex, quae veritatis!</p>   
+             </div>
+
+             <div>
+                <i class="fa-brands fa-html5"></i>               
+                 <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, possimus minima in, suscipit cum at iusto, tenetur reiciendis ipsam illo accusantium sint ratione adipisci consequuntur exercitationem quibusdam dolorum quasi aliquam?</p>   
+             </div>
+
+             <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Game Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil perferendis consequuntur odit modi sit, dignissimos repudiandae obcaecati natus voluptas voluptates, commodi autem iure error sint esse iusto distinctio. Libero!s</p>   
+             </div>
+         </div>
+        </div>
+    </div>
+<!---------------contact---------------->
+<div id="contact">
+<div class="container">
+  <div class="row">
+    <div class="contact-left">
+         <h2 class="sub-title">Contact Me</h2>
+         <p><i class="fa-regular fa-envelope"></i> hande@gmail.com</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/hande-u-b39a90281/"> <i class="fa-brands fa-linkedin"></i> </a>
+            <a href="https://github.com/handenurSE "> <i class="fa-brands fa-square-github"></i> </a>
+            <a href="https://twitter.com/handehix"> <i class="fa-brands fa-square-x-twitter"></i></a>
+          </div>
+        </div>
+    <div class="contact-right">
+    </div>
+</div>
+</div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname, event){
+        for(const tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(const tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = '0';
+    }
+
+    function closemenu() {
+        sidemenu.style.right = '-200px';
+    }
+</script>
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('open');
+    }
+</script>
+</body>
+</html>
